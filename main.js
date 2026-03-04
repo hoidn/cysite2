@@ -13,12 +13,23 @@
     yearNode.textContent = String(new Date().getFullYear());
   }
 
+  const reveals = document.querySelectorAll('.reveal');
+
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (prefersReducedMotion) {
-    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('in-view'));
+    reveals.forEach((el) => el.classList.add('in-view'));
     return;
   }
 
+  // Immediately reveal elements already in the viewport
+  const viewH = window.innerHeight;
+  reveals.forEach((el) => {
+    if (el.getBoundingClientRect().top < viewH) {
+      el.classList.add('in-view');
+    }
+  });
+
+  // Animate remaining elements as they scroll into view
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -31,5 +42,9 @@
     { threshold: 0.18, rootMargin: '0px 0px -30px 0px' }
   );
 
-  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  reveals.forEach((el) => {
+    if (!el.classList.contains('in-view')) {
+      observer.observe(el);
+    }
+  });
 })();
