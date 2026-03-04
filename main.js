@@ -47,4 +47,20 @@
       observer.observe(el);
     }
   });
+
+  // Mobile nav toggle
+  const toggle = document.querySelector('.nav-toggle');
+  const navList = document.querySelector('nav ul');
+  if (toggle && navList) {
+    toggle.addEventListener('click', () => {
+      const open = navList.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    document.addEventListener('click', (e) => {
+      if (!toggle.contains(e.target) && !navList.contains(e.target)) {
+        navList.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
 })();
