@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research | Chan-Ye Ohh</title>
+  <meta name="description" content="Research themes by Chan-Ye Ohh: stratified wakes, dynamic mode decomposition, and regime identification from limited measurements.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="research">
+  <header class="site-header">
+    <div class="header-wrap">
+      <a class="brand" href="index.html">Chan-Ye Ohh</a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a data-page="home" href="index.html">Home</a></li>
+          <li><a data-page="research" href="research.html">Research</a></li>
+          <li><a data-page="publications" href="publications.html">Publications</a></li>
+          <li><a data-page="cv" href="cv.html">CV</a></li>
+          <li><a data-page="contact" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <section class="reveal">
+      <h1 class="section-head" style="margin-top:0;">Research</h1>
+      <p class="section-intro">
+        I study how stable density stratification changes the structure and evolution of wakes. My work combines
+        experimental fluid mechanics with data-driven, interpretable analysis to extract coherent dynamics and identify
+        wake regimes across parameter space. I am interested in methods that connect physical mechanisms to measurements
+        and support robust inference in geophysical and environmental flow contexts.
+      </p>
+      <div class="notice">
+        Placeholder status: this paragraph is publishable, but can be replaced with a final 2-4 sentence research vision statement.
+      </div>
+    </section>
+
+    <section id="theme-stratified" class="split reveal" aria-labelledby="theme-stratified-title">
+      <article class="panel">
+        <h2 id="theme-stratified-title">Theme 1: Stratified Wakes and Near-Wake Physics</h2>
+        <p>
+          In stratified environments, wakes evolve under competing effects of buoyancy, momentum, and viscosity.
+          I use controlled experiments to quantify how Reynolds number, Froude number, and body incidence modify wake spacing,
+          separation, and vortex organization.
+        </p>
+        <h3>Methods</h3>
+        <ul>
+          <li>Controlled towing-tank experiments</li>
+          <li>Parameter sweeps in Reynolds and Froude space</li>
+          <li>Comparative scaling and dimensionless wake metrics</li>
+        </ul>
+        <h3>Representative Work</h3>
+        <p>Ohh and Spedding (2024), <em>Journal of Fluid Mechanics</em>.</p>
+      </article>
+      <figure class="panel">
+        <img loading="lazy" src="cy_ohh_assets/figures/JFM_2024_997_A43_Fig10_vorticity_trajectory.png" alt="Visualization of streamwise vorticity and centroid trajectories from stratified wake experiments.">
+      </figure>
+    </section>
+
+    <section id="theme-dmd" class="split reveal" aria-labelledby="theme-dmd-title">
+      <article class="panel">
+        <h2 id="theme-dmd-title">Theme 2: Modal Decomposition and Interpretable Signatures</h2>
+        <p>
+          I use dynamic mode decomposition and related methods to extract energetic coherent structures from experimental
+          and numerical datasets. The goal is to build compact, interpretable descriptors that support automated wake identification
+          and cross-condition comparison.
+        </p>
+        <h3>Methods</h3>
+        <ul>
+          <li>Dynamic mode decomposition (DMD) and variants</li>
+          <li>Feature selection from energetic mode content</li>
+          <li>Cross-validation across simulation and experiment</li>
+        </ul>
+        <h3>Representative Work</h3>
+        <p>Ohh and Spedding (2022), <em>Physical Review Fluids</em>.</p>
+      </article>
+      <figure class="panel">
+        <img loading="lazy" src="cy_ohh_assets/figures/PRF_2022_024801_Fig6_snapshots_DMD_modes.png" alt="Comparison of full-field wake snapshots and DMD mode structures.">
+      </figure>
+    </section>
+
+    <section id="theme-regime" class="split reveal" aria-labelledby="theme-regime-title">
+      <article class="panel">
+        <h2 id="theme-regime-title">Theme 3: Regime Identification from Limited Measurements</h2>
+        <p>
+          Many practical settings permit only partial sensing. I work on sparse modeling strategies that identify regimes using
+          physically meaningful features rather than black-box predictors, improving interpretability and transferability.
+        </p>
+        <h3>Methods</h3>
+        <ul>
+          <li>Library-based sparse regression</li>
+          <li>Reduced-sensing regime classification</li>
+          <li>Validation against known regime maps</li>
+        </ul>
+        <h3>Representative Work</h3>
+        <p>Chinta, Ohh, Spedding, and Luhar (2022), <em>Physical Review Fluids</em>.</p>
+      </article>
+      <figure class="panel">
+        <img loading="lazy" src="cy_ohh_assets/figures/PRF_2022_024801_Fig1_regime_diagrams.png" alt="Regime map of stratified wakes across Reynolds and Froude number space.">
+      </figure>
+    </section>
+
+    <section class="panel reveal" aria-labelledby="future-title">
+      <h2 id="future-title">Future Directions</h2>
+      <ul>
+        <li>Identify minimal measurement sets that reliably distinguish stratified wake regimes.</li>
+        <li>Link near-wake structure to far-wake signatures and internal-wave radiation.</li>
+        <li>Develop uncertainty-aware, interpretable models for regime identification from observations.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <span>&copy; <span data-year></span> Chan-Ye Ohh</span>
+      <span>Scripps Institution of Oceanography, UC San Diego</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
